@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>All Movies - MovieMania</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <h1 class="logo">MovieMania</h1>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="movies.html">Movies</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="login.html">Login</a></li>
+      </ul>
+      <button class="mode-toggle" onclick="toggleMode()">🌓</button>
+    </nav>
+  </header>
+
+  <section class="featured">
+    <h2>All Movies</h2>
+    <div class="movie-grid">
+      <!-- Movie 1 -->
+      <div class="movie-card">
+        <img src="https://upload.wikimedia.org/wikipedia/en/2/28/Jawan_film_poster.jpg" alt="Jawan">
+        <h3>Jawan</h3>
+        <p>Hindi | Action/Thriller<br>Mumbai | ₹300 | 10 June, 3:00 PM</p>
+        <a href="details.html?movie=Jawan" class="btn">Book Now</a>
+      </div>
+      <!-- Movie 2 -->
+      <div class="movie-card">
+        <img src="https://upload.wikimedia.org/wikipedia/en/7/72/Kalki_2898_AD_poster.jpg" alt="Kalki">
+        <h3>Kalki 2898 AD</h3>
+        <p>Telugu | Sci-Fi/Action<br>Bengaluru | ₹350 | 12 June, 8:15 PM</p>
+        <a href="details.html?movie=Kalki" class="btn">Book Now</a>
+      </div>
+      <!-- Movie 3 -->
+      <div class="movie-card">
+        <img src="https://upload.wikimedia.org/wikipedia/en/3/3d/Pushpa_2_The_Rule.jpg" alt="Pushpa 2">
+        <h3>Pushpa 2: The Rule</h3>
+        <p>Telugu | Action/Drama<br>Chennai | ₹280 | 15 June, 5:45 PM</p>
+        <a href="details.html?movie=Pushpa2" class="btn">Book Now</a>
+      </div>
+      <!-- Movie 4 -->
+      <div class="movie-card">
+        <img src="https://upload.wikimedia.org/wikipedia/en/0/0e/Dune_Part_Two_poster.jpg" alt="Dune Part Two">
+        <h3>Dune: Part Two</h3>
+        <p>English | Sci-Fi/Adventure<br>Delhi | ₹400 | 18 June, 7:30 PM</p>
+        <a href="details.html?movie=Dune2" class="btn">Book Now</a>
+      </div>
+      <!-- Movie 5 -->
+      <div class="movie-card">
+        <img src="https://upload.wikimedia.org/wikipedia/en/b/bd/12th_Fail_film_poster.jpg" alt="12th Fail">
+        <h3>12th Fail</h3>
+        <p>Hindi | Drama/Biography<br>Pune | ₹200 | 20 June, 4:00 PM</p>
+        <a href="details.html?movie=12thFail" class="btn">Book Now</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 MovieMania | Designed by Bhargavi</p>
+  </footer>
+</body>
+</html>

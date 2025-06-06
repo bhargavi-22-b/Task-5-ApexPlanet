@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login - MovieMania</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer>
+    document.addEventListener("DOMContentLoaded", () => {
+      const form = document.getElementById("login-form");
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        const email = document.getElementById("email").value;
+        const password = document.getElementById("password").value;
+        
+        // Simulated login check
+        if (email && password) {
+          alert(`Welcome back, ${email.split('@')[0]}!`);
+          window.location.href = "index.html"; // redirect to homepage after login
+        } else {
+          alert("Invalid credentials!");
+        }
+      });
+    });
+
+    function toggleMode() {
+      document.body.classList.toggle('dark-mode');
+    }
+  </script>
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <h1 class="logo">MovieMania</h1>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="movies.html">Movies</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="login.html" class="active">Login</a></li>
+      </ul>
+      <button class="mode-toggle" onclick="toggleMode()">🌓</button>
+    </nav>
+  </header>
+
+  <section class="login-section">
+    <h2>User Login</h2>
+    <form id="login-form" class="login-form">
+      <label for="email">Email Address:</label>
+      <input type="email" id="email" name="email" required />
+
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" required />
+
+      <button type="submit" class="btn">Login</button>
+      <p class="note">Don’t have an account? <a href="register.html">Register here</a></p>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 MovieMania | Designed by Bhargavi</p>
+  </footer>
+</body>
+</html>

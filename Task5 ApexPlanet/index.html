@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MovieMania - Book Tickets Online</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <h1 class="logo">MovieMania</h1>
+      <ul class="nav-links">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="movies.html">Movies</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="login.html">Login</a></li>
+      </ul>
+      <button class="mode-toggle" onclick="toggleMode()">🌓</button>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h2>Welcome to MovieMania</h2>
+    <p>Book your favorite movies and shows with ease.</p>
+    <a href="movies.html" class="btn">Explore Movies</a>
+  </section>
+
+  <section class="featured">
+    <h2>Now Showing</h2>
+    <div class="movie-grid">
+      <div class="movie-card">
+        <img src="https://i.postimg.cc/GmhNypfC/jawan.jpg" alt="Jawan Poster" />
+        <h3>Jawan</h3>
+        <p>Action/Thriller - ₹300</p>
+        <a href="details.html?movie=Jawan" class="btn">Book Now</a>
+      </div>
+      <div class="movie-card">
+        <img src="https://i.postimg.cc/DwvZ4qFw/kaliki.jpg" alt="Kalki Poster" />
+        <h3>Kalki 2898 AD</h3>
+        <p>Sci-Fi/Action - ₹350</p>
+        <a href="details.html?movie=Kalki" class="btn">Book Now</a>
+      </div>
+      <div class="movie-card">
+        <img src="https://i.postimg.cc/pX8G5FC4/the-rule.jpg" alt="Pushpa Poster" />
+        <h3>Pushpa 2: The Rule</h3>
+        <p>Action/Drama - ₹280</p>
+        <a href="details.html?movie=Pushpa2" class="btn">Book Now</a>
+      </div>
+      <div class="movie-card">
+        <img src="https://i.postimg.cc/KvvjRPmv/1.jpg" alt="Dune 2 Poster" />
+        <h3>Dune: Part Two</h3>
+        <p>Sci-Fi/Adventure - ₹400</p>
+        <a href="details.html?movie=Dune2" class="btn">Book Now</a>
+      </div>
+      <div class="movie-card">
+        <img src="https://i.postimg.cc/9M6kst1P/12.jpg" alt="12th Fail Poster" />
+        <h3>12th Fail</h3>
+        <p>Drama/Biography - ₹200</p>
+        <a href="details.html?movie=12thFail" class="btn">Book Now</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 MovieMania | Designed by Bhargavi</p>
+  </footer>
+
+  <script>
+    function toggleMode() {
+      document.body.classList.toggle("dark-mode");
+    }
+  </script>
+</body>
+</html>

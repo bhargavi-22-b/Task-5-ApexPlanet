@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Book Tickets - MovieMania</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer>
+    window.addEventListener("DOMContentLoaded", () => {
+      const params = new URLSearchParams(window.location.search);
+      const movie = params.get("movie");
+      if (movie) {
+        document.getElementById("movie-title").textContent = movie.replace(/([A-Z])/g, ' $1').trim();
+      }
+
+      const form = document.getElementById("booking-form");
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        const name = document.getElementById("name").value;
+        const seats = document.getElementById("seats").value;
+        alert(`Thank you ${name}! Your ${seats} ticket(s) have been booked successfully.`);
+        form.reset();
+      });
+    });
+  </script>
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <h1 class="logo">MovieMania</h1>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="movies.html">Movies</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="login.html">Login</a></li>
+      </ul>
+      <button class="mode-toggle" onclick="toggleMode()">🌓</button>
+    </nav>
+  </header>
+
+  <section class="booking-section">
+    <h2>Book Tickets for <span id="movie-title">Selected Movie</span></h2>
+    <form id="booking-form" class="booking-form">
+      <label for="name">Your Name:</label>
+      <input type="text" id="name" name="name" required />
+
+      <label for="email">Email Address:</label>
+      <input type="email" id="email" name="email" required />
+
+      <label for="seats">Number of Tickets:</label>
+      <input type="number" id="seats" name="seats" min="1" max="10" required />
+
+      <label for="phone">Mobile Number:</label>
+      <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required />
+
+      <button type="submit" class="btn">Confirm Booking</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 MovieMania | Designed by Bhargavi</p>
+  </footer>
+</body>
+</html>

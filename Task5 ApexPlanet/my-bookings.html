@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Bookings - MovieMania</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer>
+    document.addEventListener("DOMContentLoaded", () => {
+      // Sample static bookings data (this can be connected to backend or localStorage)
+      const bookings = [
+        { movie: "Jawan", date: "10 June", time: "3:00 PM", seats: 2, location: "Mumbai", price: 300 },
+        { movie: "Dune: Part Two", date: "18 June", time: "7:30 PM", seats: 1, location: "Delhi", price: 400 },
+      ];
+
+      const bookingsContainer = document.getElementById("bookings-list");
+      if (bookings.length === 0) {
+        bookingsContainer.innerHTML = "<p>You have no bookings yet.</p>";
+      } else {
+        bookings.forEach(b => {
+          const total = b.seats * b.price;
+          const bookingItem = document.createElement("div");
+          bookingItem.classList.add("booking-item");
+          bookingItem.innerHTML = `
+            <h3>${b.movie}</h3>
+            <p><strong>Date & Time:</strong> ${b.date}, ${b.time}</p>
+            <p><strong>Location:</strong> ${b.location}</p>
+            <p><strong>Seats:</strong> ${b.seats}</p>
+            <p><strong>Total Price:</strong> ₹${total}</p>
+          `;
+          bookingsContainer.appendChild(bookingItem);
+        });
+      }
+    });
+  </script>
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <h1 class="logo">MovieMania</h1>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="movies.html">Movies</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="login.html">Login</a></li>
+        <li><a href="my-bookings.html" class="active">My Bookings</a></li>
+      </ul>
+      <button class="mode-toggle" onclick="toggleMode()">🌓</button>
+    </nav>
+  </header>
+
+  <section class="bookings-section">
+    <h2>My Bookings</h2>
+    <div id="bookings-list" class="bookings-list"></div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 MovieMania | Designed by Bhargavi</p>
+  </footer>
+</body>
+</html>
